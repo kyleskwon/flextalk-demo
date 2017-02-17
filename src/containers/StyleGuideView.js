@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view';
 import { SocialIcon } from 'react-native-elements';
-import { Actions } from 'react-native-router-flux';
+//import { Actions } from 'react-native-router-flux';
 
 // Consts and Libs
 import { AppColors, AppStyles } from '@theme/';
@@ -129,7 +129,6 @@ class StyleGuide extends Component {
   renderRow = (data, sectionID) => (
     <ListItem
       key={`list-row-${sectionID}`}
-      onPress={Actions.comingSoon}
       title={data.title}
       subtitle={data.role || null}
       leftIcon={data.icon ? { name: data.icon } : null}
@@ -155,7 +154,6 @@ class StyleGuide extends Component {
                   <Button
                     large
                     title={'Large'}
-                    onPress={Actions.comingSoon}
                   />
                   <Spacer size={10} />
 
@@ -164,27 +162,23 @@ class StyleGuide extends Component {
                     title={'W/ Icon'}
                     backgroundColor={'#33BB76'}
                     icon={{ name: 'code' }}
-                    onPress={Actions.comingSoon}
                   />
                   <Spacer size={10} />
 
                   <Button
                     title={'Default'}
-                    onPress={Actions.comingSoon}
                   />
                   <Spacer size={10} />
 
                   <Button
                     title={'Colored'}
                     backgroundColor={'#FB6567'}
-                    onPress={Actions.comingSoon}
                   />
                   <Spacer size={10} />
 
                   <Button
                     small
                     title={'Small'}
-                    onPress={Actions.comingSoon}
                   />
                   <Spacer size={10} />
 
@@ -194,7 +188,6 @@ class StyleGuide extends Component {
                     iconRight
                     title={'Outlined'}
                     icon={{ name: 'cached' }}
-                    onPress={Actions.comingSoon}
                   />
                 </View>
               </Card>
@@ -271,7 +264,6 @@ class StyleGuide extends Component {
 
               <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={Actions.comingSoon}
               >
                 <Card
                   image={{ uri: 'http://wp-api.mcnam.ee/wp-content/uploads/2016/10/brekkie-crumble-33651_l.jpeg' }}
@@ -287,7 +279,6 @@ class StyleGuide extends Component {
 
               <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={Actions.comingSoon}
               >
                 <Card
                   image={{ uri: 'http://wp-api.mcnam.ee/wp-content/uploads/2016/10/brekkie-crumble-33651_l.jpeg' }}
