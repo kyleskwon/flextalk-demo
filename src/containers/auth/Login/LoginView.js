@@ -9,6 +9,7 @@ import {
   ScrollView,
   AsyncStorage,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import FormValidation from 'tcomb-form-native';
 import { Actions } from 'react-native-router-flux';
@@ -141,23 +142,24 @@ class Login extends Component {
         style={[AppStyles.container]}
         contentContainerStyle={[AppStyles.container]}
       >
-        <Card>
           <Alerts
             status={this.state.resultMsg.status}
             success={this.state.resultMsg.success}
             error={this.state.resultMsg.error}
           />
 
+        <View style={{
+          flex: 2,
+          borderWidth: 4,
+          borderColor: 'green',
+          justifyContent: 'center',
+          paddingHorizontal: 20}}
+        >
           <Form
             ref={(b) => { this.form = b; }}
             type={this.state.form_fields}
             value={this.state.form_values}
             options={this.state.options}
-          />
-
-          <Button
-            title={'Login'}
-            onPress={this.login}
           />
 
           <Spacer size={10} />
@@ -167,18 +169,28 @@ class Login extends Component {
               Forgot Password
             </Text>
           </TouchableOpacity>
+        </View>
+
+        <View style={{
+          flex: 1,
+          borderWidth: 4,
+          borderColor: 'orange',
+          justifyContent: 'flex-start'}}
+        >
+          <Button
+            title={'Login'}
+            onPress={this.login}
+            buttonStyle={{marginHorizontal: 20, marginVertical: 5}}
+          />
 
           <Spacer size={10} />
-
-          <Text p style={[AppStyles.textCenterAligned]}>
-            - or -
-          </Text>
 
           <Button
             title={'Sign Up'}
             onPress={Actions.signUp}
+            buttonStyle={{marginHorizontal: 20}}
           />
-        </Card>
+        </View>
       </ScrollView>
     );
   }

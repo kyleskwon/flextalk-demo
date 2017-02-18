@@ -101,7 +101,6 @@ class RecipeView extends Component {
 
         <Card>
           <Text h2>{title.rendered}</Text>
-          <Text>{content.rendered}</Text>
         </Card>
 
         {acf.ingredients ?
