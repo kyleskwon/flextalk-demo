@@ -155,20 +155,22 @@ class Login extends Component {
           justifyContent: 'center',
           paddingHorizontal: 20}}
         >
-          <Form
-            ref={(b) => { this.form = b; }}
-            type={this.state.form_fields}
-            value={this.state.form_values}
-            options={this.state.options}
-          />
+          <Card>
+            <Form
+              ref={(b) => { this.form = b; }}
+              type={this.state.form_fields}
+              value={this.state.form_values}
+              options={this.state.options}
+            />
 
-          <Spacer size={10} />
+            <Spacer size={10} />
 
-          <TouchableOpacity onPress={Actions.passwordReset}>
-            <Text p style={[AppStyles.textCenterAligned, AppStyles.link]}>
-              Forgot Password
-            </Text>
-          </TouchableOpacity>
+            <TouchableOpacity onPress={Actions.passwordReset}>
+              <Text p style={[AppStyles.textCenterAligned, AppStyles.link]}>
+                Forgot Password
+              </Text>
+            </TouchableOpacity>
+          </Card>
         </View>
 
         <View style={{
