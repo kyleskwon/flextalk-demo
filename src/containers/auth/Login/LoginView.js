@@ -150,8 +150,6 @@ class Login extends Component {
 
         <View style={{
           flex: 2,
-          borderWidth: 4,
-          borderColor: 'green',
           justifyContent: 'center',
           paddingHorizontal: 20}}
         >
@@ -174,23 +172,26 @@ class Login extends Component {
         </View>
 
         <View style={{
+          alignItems: 'center',
           flex: 1,
-          borderWidth: 4,
-          borderColor: 'orange',
           justifyContent: 'flex-start'}}
         >
           <Button
             title={'Login'}
             onPress={this.login}
-            buttonStyle={{marginHorizontal: 20, marginVertical: 5}}
+            buttonStyle={{marginHorizontal: 20, marginVertical: 5, width: 300}}
           />
 
           <Spacer size={10} />
 
+          <Text>- or -</Text>
+
+          <Spacer size={13} />
+
           <Button
             title={'Sign Up'}
             onPress={Actions.signUp}
-            buttonStyle={{marginHorizontal: 20}}
+            buttonStyle={{marginHorizontal: 20, width: 300}}
           />
         </View>
       </ScrollView>
